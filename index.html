@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Personal portfolio of a skilled front-end web developer specializing in HTML5, CSS3, JavaScript, and Bootstrap 5. View projects, skills, and get in touch." />
+  <meta name="keywords" content="web developer, front-end developer, portfolio, HTML, CSS, JavaScript, Bootstrap, responsive design" />
+  <meta name="author" content="Niel Angelo Rico Doyugan" />
+  <meta property="og:title" content="Niel Angelo Rico Doyugan— Front-End Developer Portfolio" />
+  <meta property="og:description" content="Crafting modern, responsive web experiences with clean code and beautiful design." />
+  <title> Niel Angelo Rico Doyugan — Front-End Developer Portfolio</title>
+
+  <!-- Favicon (inline SVG data URI) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%237c3aed'/><text y='24' x='5' font-size='20' font-family='Arial' font-weight='900' fill='white'>AR</text></svg>" />
+
+  <!-- Preload Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ── Custom Cursor ── -->
+  <div id="cursor-dot" aria-hidden="true"></div>
+  <div id="cursor-ring" aria-hidden="true"></div>
+
+  <!-- ── Floating Social Sidebar ── -->
+  <aside class="social-sidebar" aria-label="Social links">
+    <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+    </a>
+    <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+    </a>
+    <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+    </a>
+  </aside>
+
+  <!-- ════════════════════════════════════════════════════════
+       NAVBAR
+  ════════════════════════════════════════════════════════════ -->
+  <header id="navbar" role="banner">
+    <nav class="nav-container" aria-label="Main navigation">
+      <!-- Logo -->
+      <a href="#hero" class="nav-logo" aria-label="Niel Angelo Rico Doyugan- Home">
+        <div class="logo-icon" aria-hidden="true">ND</div>
+        <div class="logo-text"><span>Niel Angelo</span> Rico Doyugan</div>
+      </a>
+
+      <!-- Desktop Links -->
+      <ul class="nav-links" role="list">
+        <li><a href="#hero"     class="nav-link active">Home</a></li>
+        <li><a href="#about"    class="nav-link">About</a></li>
+        <li><a href="#skills"   class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact"  class="nav-link">Contact</a></li>
+      </ul>
+
+      <a href="#contact" class="nav-cta">Hire Me</a>
+
+      <!-- Hamburger -->
+      <button id="hamburger" class="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile Nav -->
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
+    <a href="#hero"     class="nav-link mobile-nav-link">🏠 Home</a>
+    <a href="#about"    class="nav-link mobile-nav-link">👤 About</a>
+    <a href="#skills"   class="nav-link mobile-nav-link">⚡ Skills</a>
+    <a href="#projects" class="nav-link mobile-nav-link">🚀 Projects</a>
+    <a href="#contact"  class="nav-link mobile-nav-link">✉️ Contact</a>
+  </nav>
+
+  <!-- ════════════════════════════════════════════════════════
+       HERO SECTION
+  ════════════════════════════════════════════════════════════ -->
+  <section id="hero" aria-label="Introduction">
+    <canvas id="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero-noise" aria-hidden="true"></div>
+
+    <div class="hero-container">
+      <!-- Content -->
+      <div class="hero-content">
+        <div class="hero-badge" aria-label="Status">
+          <span class="hero-badge-dot" aria-hidden="true"></span>
+          Available for Freelance Work
+        </div>
+
+        <h1 class="hero-name">
+          Hi, I'm <span class="gradient-text">Niel Angelo Rico Doyugan</span>
+        </h1>
+
+        <div class="hero-title-line">
+          <span>I'm a</span>
+          <div class="typing-wrapper">
+            <span id="typing-text" aria-live="polite"></span>
+            <span class="cursor-blink" aria-hidden="true"></span>
+          </div>
+        </div>
+
+        <p class="hero-desc">
+          I craft modern, responsive web experiences that combine clean code with beautiful design.
+          Passionate about turning complex ideas into elegant digital solutions.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#projects" class="btn-primary" id="hero-view-projects">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/></svg>
+            View Projects
+          </a>
+          <a href="#contact" class="btn-outline" id="hero-contact-me">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Contact Me
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat-number" data-count="3" data-suffix="+">0+</span>
+            <span class="hero-stat-label">Years Experience</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-number" data-count="20" data-suffix="+">0+</span>
+            <span class="hero-stat-label">Projects Done</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-number" data-count="15" data-suffix="+">0+</span>
+            <span class="hero-stat-label">Happy Clients</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-number" data-count="100" data-suffix="%">0%</span>
+            <span class="hero-stat-label">Satisfaction</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="hero-image-wrapper" aria-hidden="true">
+        <div class="hero-image-container">
+          <div class="hero-image-ring"></div>
+          <div class="hero-image-ring-inner"></div>
+          <img src="assets/images/profile1.png" alt="Niel Angelo rico Doyugan— Front-End Developer" class="hero-img" />
+
+          <div class="hero-image-badge badge-top">
+            <span class="badge-icon">💻</span>
+            <div>
+              <div class="badge-label">Status</div>
+              <div class="badge-value">Open to Work</div>
+            </div>
+          </div>
+
+          <div class="hero-image-badge badge-bottom">
+            <span class="badge-icon">🏆</span>
+            <div>
+              <div class="badge-label">Experience</div>
+              <div class="badge-value">3+ Years</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator" aria-hidden="true">
+      <span class="scroll-text">Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       ABOUT SECTION
+  ════════════════════════════════════════════════════════════ -->
+  <section id="about" class="section-padding" aria-labelledby="about-title">
+    <div class="container">
+      <div class="about-grid">
+
+        <!-- Left: Bio -->
+        <div class="reveal-left">
+          <div class="about-label">About Me</div>
+          <h2 class="section-title" id="about-title">
+            Passionate Developer &amp;<br><span class="gradient-text">Creative Thinker</span>
+          </h2>
+          <p class="about-bio">
+            I'm <strong>Niel Angelo Rico Doyugan</strong>, a front-end web developer with over 3 years of experience building
+            responsive and visually stunning websites. I specialize in turning design concepts into pixel-perfect,
+            high-performance web applications.
+          </p>
+          <p class="about-bio">
+            My journey started with a curiosity about how websites work, which evolved into a <strong>passion for
+            crafting digital experiences</strong> that are both beautiful and functional. I love working with modern
+            web technologies and keeping up with the latest trends in UI/UX.
+          </p>
+          <p class="about-bio">
+            When I'm not coding, I enjoy exploring new technologies, contributing to open-source projects, and
+            helping businesses establish a strong online presence. My goal is to create web solutions that not only
+            look great but also deliver measurable results.
+          </p>
+
+          <div class="about-download-btn">
+            <a href="assets/resume/resume.pdf" download class="btn-primary" id="about-download-resume">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download Resume
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Stats -->
+        <div class="about-stats reveal-right">
+          <div class="stat-card" data-delay="0">
+            <span class="stat-card-icon">🚀</span>
+            <div class="stat-card-number" data-count="20" data-suffix="+">20+</div>
+            <div class="stat-card-label">Projects Completed</div>
+          </div>
+          <div class="stat-card" data-delay="100">
+            <span class="stat-card-icon">👥</span>
+            <div class="stat-card-number" data-count="15" data-suffix="+">15+</div>
+            <div class="stat-card-label">Happy Clients</div>
+          </div>
+          <div class="stat-card" data-delay="200">
+            <span class="stat-card-icon">⏰</span>
+            <div class="stat-card-number" data-count="3" data-suffix="+">3+</div>
+            <div class="stat-card-label">Years of Experience</div>
+          </div>
+          <div class="stat-card" data-delay="300">
+            <span class="stat-card-icon">⭐</span>
+            <div class="stat-card-number" data-count="100" data-suffix="%">100%</div>
+            <div class="stat-card-label">Client Satisfaction</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       SKILLS SECTION
+  ════════════════════════════════════════════════════════════ -->
+  <section id="skills" class="section-padding" aria-labelledby="skills-title">
+    <div class="container">
+
+      <div class="skills-header reveal">
+        <div class="section-label">Expertise</div>
+        <h2 class="section-title" id="skills-title">My <span class="gradient-text">Tech Stack</span></h2>
+        <p class="section-subtitle">
+          A curated set of tools and technologies I use to craft premium web experiences.
+        </p>
+      </div>
+
+      <!-- Tabs -->
+      <div class="skills-tabs reveal" data-delay="150" role="tablist" aria-label="Skill categories">
+        <button class="skill-tab active" data-tab="frontend" id="tab-frontend" role="tab" aria-selected="true" aria-controls="panel-frontend">Front-End</button>
+        <button class="skill-tab" data-tab="tools"    id="tab-tools"    role="tab" aria-selected="false" aria-controls="panel-tools">Tools & Tech</button>
+        <button class="skill-tab" data-tab="other"    id="tab-other"    role="tab" aria-selected="false" aria-controls="panel-other">Other Skills</button>
+      </div>
+
+      <!-- Front-End Panel -->
+      <div id="panel-frontend" class="skills-panel active" role="tabpanel" aria-labelledby="tab-frontend">
+        <div class="skill-card reveal" data-delay="0">
+          <div class="skill-icon-wrap skill-icon-bg-orange">🌐</div>
+          <div class="skill-info">
+            <div class="skill-name">HTML5</div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-level="95"></div></div>
+            <div class="skill-percent">95%</div>
+          </div>
+        </div>
+        <div class="skill-card reveal" data-delay="80">
+          <div class="skill-icon-wrap skill-icon-bg-blue">🎨</div>
+          <div class="skill-info">
+            <div class="skill-name">CSS3</div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-level="90"></div></div>
+            <div class="skill-percent">90%</div>
+          </div>
+        </div>
+        <div class="skill-card reveal" data-delay="160">
+          <div class="skill-icon-wrap skill-icon-bg-cyan">⚡</div>
+          <div class="skill-info">
+            <div class="skill-name">JavaScript</div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-level="82"></div></div>
+            <div class="skill-percent">82%</div>
+          </div>
+        </div>
+        <div class="skill-card reveal" data-delay="240">
+          <div class="skill-icon-wrap skill-icon-bg-purple">🅱️</div>
+          <div class="skill-info">
+            <div class="skill-name">Bootstrap 5</div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-level="88"></div></div>
+            <div class="skill-percent">88%</div>
+          </div>
+        </div>
+        <div class="skill-card reveal" data-delay="320">
+          <div class="skill-icon-wrap skill-icon-bg-pink">📱</div>
+          <div class="skill-info">
+            <div class="skill-name">Responsive Design</div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-level="92"></div></div>
+            <div class="skill-percent">92%</div>
+          </div>
+        </div>
+        <div class="skill-card reveal" data-delay="400">
+          <div class="skill-icon-wrap skill-icon-bg-green">🎯</div>
+          <div class="skill-info">
+            <div class="skill-name">UI Design</div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-level="78"></div></div>
+            <div class="skill-percent">78%</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools Panel -->
+      <div id="panel-tools" class="skills-panel" role="tabpanel" aria-labelledby="tab-tools">
+        <div class="skill-card reveal">
+          <div class="skill-icon-wrap skill-icon-bg-blue">💻</div>
+          <div class="skill-info">
+            <div class="skill-name">Visual Studio Code</div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-level="95"></div></div>
+            <div class="skill-percent">95%</div>
+          </div>
+        </div>
+        <div class="skill-card reveal" data-delay="80">
+          <div class="skill-icon-wrap skill-icon-bg-orange">🌿</div>
+          <div class="skill-info">
+            <div class="skill-name">Git</div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-level="80"></div></div>
+            <div class="skill-percent">80%</div>
+          </div>
+        </div>
+        <div class="skill-card reveal" data-delay="160">
+          <div class="skill-icon-wrap skill-icon-bg-purple">🐙</div>
+          <div class="skill-info">
+            <div class="skill-name">GitHub</div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-level="82"></div></div>
+            <div class="skill-percent">82%</div>
+          </div>
+        </div>
+        <div class="skill-card reveal" data-delay="240">
+          <div class="skill-icon-wrap skill-icon-bg-cyan">🎨</div>
+          <div class="skill-info">
+            <div class="skill-name">Figma</div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-level="70"></div></div>
+            <div class="skill-percent">70%</div>
+          </div>
+        </div>
+        <div class="skill-card reveal" data-delay="320">
+          <div class="skill-icon-wrap skill-icon-bg-green">🔧</div>
+          <div class="skill-info">
+            <div class="skill-name">Arduino IDE</div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-level="65"></div></div>
+            <div class="skill-percent">65%</div>
+          </div>
+        </div>
+        <div class="skill-card reveal" data-delay="400">
+          <div class="skill-icon-wrap skill-icon-bg-pink">🚀</div>
+          <div class="skill-info">
+            <div class="skill-name">Vercel / Netlify</div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-level="75"></div></div>
+            <div class="skill-percent">75%</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Other Panel -->
+      <div id="panel-other" class="skills-panel" role="tabpanel" aria-labelledby="tab-other">
+        <div class="skill-card reveal">
+          <div class="skill-icon-wrap skill-icon-bg-cyan">🔍</div>
+          <div class="skill-info">
+            <div class="skill-name">SEO Optimization</div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-level="75"></div></div>
+            <div class="skill-percent">75%</div>
+          </div>
+        </div>
+        <div class="skill-card reveal" data-delay="80">
+          <div class="skill-icon-wrap skill-icon-bg-orange">🛠️</div>
+          <div class="skill-info">
+            <div class="skill-name">Website Maintenance</div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-level="88"></div></div>
+            <div class="skill-percent">88%</div>
+          </div>
+        </div>
+        <div class="skill-card reveal" data-delay="160">
+          <div class="skill-icon-wrap skill-icon-bg-purple">🖥️</div>
+          <div class="skill-info">
+            <div class="skill-name">Technical Support</div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-level="85"></div></div>
+            <div class="skill-percent">85%</div>
+          </div>
+        </div>
+        <div class="skill-card reveal" data-delay="240">
+          <div class="skill-icon-wrap skill-icon-bg-green">📐</div>
+          <div class="skill-info">
+            <div class="skill-name">Cross-Browser Compat.</div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-level="90"></div></div>
+            <div class="skill-percent">90%</div>
+          </div>
+        </div>
+        <div class="skill-card reveal" data-delay="320">
+          <div class="skill-icon-wrap skill-icon-bg-blue">⚡</div>
+          <div class="skill-info">
+            <div class="skill-name">Performance Optim.</div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-level="78"></div></div>
+            <div class="skill-percent">78%</div>
+          </div>
+        </div>
+        <div class="skill-card reveal" data-delay="400">
+          <div class="skill-icon-wrap skill-icon-bg-pink">🤝</div>
+          <div class="skill-info">
+            <div class="skill-name">Client Communication</div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-level="92"></div></div>
+            <div class="skill-percent">92%</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       PROJECTS SECTION
+  ════════════════════════════════════════════════════════════ -->
+  <section id="projects" class="section-padding" aria-labelledby="projects-title">
+    <div class="container">
+
+      <div class="projects-header reveal">
+        <div class="section-label">Portfolio</div>
+        <h2 class="section-title" id="projects-title">Featured <span class="gradient-text">Projects</span></h2>
+        <p class="section-subtitle">
+          A selection of projects that showcase my skills in web development, design, and problem-solving.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <article class="project-card reveal" data-delay="0">
+          <div class="project-img-wrap">
+            <img src="assets/images/project1.png" alt="Responsive Portfolio Website screenshot" loading="lazy" />
+            <div class="project-img-overlay">
+              <a href="#" class="project-link-btn demo" id="project1-demo" aria-label="View live demo of Portfolio Website">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Live Demo
+              </a>
+              <a href="https://github.com/" target="_blank" class="project-link-btn github" id="project1-github" aria-label="View Portfolio Website on GitHub">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-number">01 / Portfolio</div>
+            <h3 class="project-name">Responsive Portfolio Website</h3>
+            <p class="project-desc">A modern, fully responsive personal portfolio built with a dark glassmorphism design, animated backgrounds, typing effects, and smooth scroll interactions.</p>
+            <div class="project-tags">
+              <span class="project-tag">HTML5</span>
+              <span class="project-tag cyan">CSS3</span>
+              <span class="project-tag">JavaScript</span>
+              <span class="project-tag cyan">Responsive</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card reveal" data-delay="120">
+          <div class="project-img-wrap">
+            <img src="assets/images/project2.png" alt="Apartment Management Website screenshot" loading="lazy" />
+            <div class="project-img-overlay">
+              <a href="#" class="project-link-btn demo" id="project2-demo" aria-label="View live demo of Apartment Management Website">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Live Demo
+              </a>
+              <a href="https://github.com/" target="_blank" class="project-link-btn github" id="project2-github" aria-label="View Apartment Management Website on GitHub">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-number">02 / Dashboard</div>
+            <h3 class="project-name">Apartment Management Website</h3>
+            <p class="project-desc">A full-featured apartment management system with tenant profiles, payment tracking, lease management, and a real-time notification dashboard.</p>
+            <div class="project-tags">
+              <span class="project-tag">HTML5</span>
+              <span class="project-tag cyan">Bootstrap 5</span>
+              <span class="project-tag">JavaScript</span>
+              <span class="project-tag cyan">CSS3</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card reveal" data-delay="240">
+          <div class="project-img-wrap">
+            <img src="assets/images/project3.png" alt="Student Information System screenshot" loading="lazy" />
+            <div class="project-img-overlay">
+              <a href="#" class="project-link-btn demo" id="project3-demo" aria-label="View live demo of Student Information System">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Live Demo
+              </a>
+              <a href="https://github.com/" target="_blank" class="project-link-btn github" id="project3-github" aria-label="View Student Information System on GitHub">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-number">03 / Web App</div>
+            <h3 class="project-name">Student Information System</h3>
+            <p class="project-desc">A comprehensive academic management platform with student enrollment, grade tracking, attendance monitoring, and performance analytics reports.</p>
+            <div class="project-tags">
+              <span class="project-tag">HTML5</span>
+              <span class="project-tag cyan">CSS3</span>
+              <span class="project-tag">Bootstrap 5</span>
+              <span class="project-tag cyan">JavaScript</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="project-card reveal" data-delay="0">
+          <div class="project-img-wrap">
+            <img src="assets/images/project4.png" alt="CRUD Application screenshot" loading="lazy" />
+            <div class="project-img-overlay">
+              <a href="#" class="project-link-btn demo" id="project4-demo" aria-label="View live demo of CRUD Application">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Live Demo
+              </a>
+              <a href="https://github.com/" target="_blank" class="project-link-btn github" id="project4-github" aria-label="View CRUD Application on GitHub">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-number">04 / Application</div>
+            <h3 class="project-name">CRUD Application</h3>
+            <p class="project-desc">A full data-management application featuring Create, Read, Update, and Delete operations with real-time search, filtering, pagination, and modal forms.</p>
+            <div class="project-tags">
+              <span class="project-tag">HTML5</span>
+              <span class="project-tag cyan">CSS3</span>
+              <span class="project-tag">JavaScript</span>
+              <span class="project-tag cyan">LocalStorage</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 5 -->
+        <article class="project-card reveal" data-delay="120">
+          <div class="project-img-wrap">
+            <img src="assets/images/project5.png" alt="Arduino Password Door Lock project photo" loading="lazy" />
+            <div class="project-img-overlay">
+              <a href="#" class="project-link-btn demo" id="project5-demo" aria-label="View documentation for Arduino Password Door Lock">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Docs
+              </a>
+              <a href="https://github.com/" target="_blank" class="project-link-btn github" id="project5-github" aria-label="View Arduino Password Door Lock on GitHub">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-number">05 / Hardware</div>
+            <h3 class="project-name">Password Door Lock (Arduino)</h3>
+            <p class="project-desc">An embedded systems project using Arduino Uno with a 4×4 keypad, LCD display, and servo motor to build a programmable electronic door lock system.</p>
+            <div class="project-tags">
+              <span class="project-tag">Arduino</span>
+              <span class="project-tag cyan">C/C++</span>
+              <span class="project-tag">Embedded Systems</span>
+              <span class="project-tag cyan">IoT</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       CONTACT SECTION
+  ════════════════════════════════════════════════════════════ -->
+  <section id="contact" class="section-padding" aria-labelledby="contact-title">
+    <div class="container">
+
+      <div class="contact-grid">
+
+        <!-- Left: Info -->
+        <div class="contact-info reveal-left">
+          <div>
+            <div class="section-label">Get In Touch</div>
+            <h2 class="section-title" id="contact-title">Let's <span class="gradient-text">Work Together</span></h2>
+            <p class="contact-info-desc">
+              Have a project in mind? I'd love to hear about it. Whether you need a new website,
+              want to refresh an existing one, or need technical support — I'm here to help!
+            </p>
+          </div>
+
+          <div class="contact-details">
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon" aria-hidden="true">✉️</div>
+              <div>
+                <div class="contact-detail-label">Email Address</div>
+                <div class="contact-detail-value">doyugan11@gmail.com</div>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon" aria-hidden="true">📱</div>
+              <div>
+                <div class="contact-detail-label">Phone Number</div>
+                <div class="contact-detail-value">0936-140-4518</div>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon" aria-hidden="true">📍</div>
+              <div>
+                <div class="contact-detail-label">Location</div>
+                <div class="contact-detail-value">Guiwanon, Maribojoc, Bohol</div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <p style="font-size:0.82rem; color: var(--text-muted); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600;">Connect With Me</p>
+            <div class="contact-socials">
+              <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="social-pill" id="contact-github" aria-label="GitHub profile">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                GitHub
+              </a>
+              <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="social-pill" id="contact-linkedin" aria-label="LinkedIn profile">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                LinkedIn
+              </a>
+              <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" class="social-pill" id="contact-facebook" aria-label="Facebook profile">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                Facebook
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="contact-form-wrap reveal-right">
+          <h3 style="font-family: var(--font-heading); font-size: 1.3rem; font-weight: 700; margin-bottom: 28px;">
+            Send Me a <span class="gradient-text">Message</span>
+          </h3>
+          <form id="contact-form" novalidate aria-label="Contact form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="form-name">Full Name</label>
+                <input
+                  type="text"
+                  id="form-name"
+                  name="name"
+                  class="form-input"
+                  placeholder=""
+                  autocomplete="name"
+                  required
+                  aria-required="true"
+                />
+              </div>
+              <div class="form-group">
+                <label for="form-email">Email Address</label>
+                <input
+                  type="email"
+                  id="form-email"
+                  name="email"
+                  class="form-input"
+                  placeholder=""
+                  autocomplete="email"
+                  required
+                  aria-required="true"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="form-subject">Subject</label>
+              <input
+                type="text"
+                id="form-subject"
+                name="subject"
+                class="form-input"
+                placeholder=""
+              />
+            </div>
+            <div class="form-group">
+              <label for="form-message-text">Message</label>
+              <textarea
+                id="form-message-text"
+                name="message"
+                class="form-textarea"
+                placeholder=""
+                required
+                aria-required="true"
+              ></textarea>
+            </div>
+            <button type="submit" class="form-submit" id="contact-submit">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Send Message
+            </button>
+            <div id="form-message" class="form-message" role="alert" aria-live="polite"></div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════════════════════ -->
+  <footer role="contentinfo">
+    <div class="footer-inner">
+      <p class="footer-copy">
+        &copy; <span id="footer-year"></span> <span>Niel Angelo Rico Doyugan</span>. Crafted with ❤️ &amp; lots of ☕
+      </p>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/main.js"></script>
+  <script>
+    // Footer year
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

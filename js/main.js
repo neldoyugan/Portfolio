@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     animateRing();
 
-    document.querySelectorAll('a, button, .skill-tab, .project-card, .stat-card').forEach(el => {
+    document.querySelectorAll('a, button, .skill-tab, .project-card').forEach(el => {
       el.addEventListener('mouseenter', () => ring.classList.add('hovered'));
       el.addEventListener('mouseleave', () => ring.classList.remove('hovered'));
     });
@@ -181,38 +181,77 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ── Typing Animation ───────────────────────────────────────
+  // ── Hero Typing Animation ──────────────────────────────────
   const typingEl = document.getElementById('typing-text');
-  const roles = [
-    'Front-End Developer',
-    'UI/UX Enthusiast',
-    'Web Designer',
-    'JavaScript Developer',
-    'Responsive Design Expert',
-  ];
-  let roleIdx = 0, charIdx = 0, deleting = false;
+  const heroTitleLine = document.getElementById('hero-title-line');
 
-  function typeLoop() {
-    const current = roles[roleIdx];
-    if (deleting) {
-      typingEl.textContent = current.substring(0, charIdx--);
-      if (charIdx < 0) {
-        deleting = false;
-        roleIdx = (roleIdx + 1) % roles.length;
-        setTimeout(typeLoop, 500);
-        return;
+  if (typingEl) {
+    const phrases = [
+      'Web Developer',
+      'Front-End Developer',
+      'Lifelong Learner',
+      'Problem Solver',
+    ];
+
+    const TYPE_SPEED   = 90;   // 90ms per character when typing
+    const DELETE_SPEED = 50;   // 50ms per character when deleting
+    const PAUSE_DELAY  = 1500; // 1.5s pause when phrase is complete
+    const SWITCH_DELAY = 300;  // Pause before typing next phrase
+
+    // Accessibility: Respect prefers-reduced-motion
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (prefersReducedMotion) {
+      typingEl.textContent = phrases[0];
+      if (heroTitleLine) {
+        heroTitleLine.setAttribute('aria-label', `I'm an aspiring ${phrases[0]}`);
       }
     } else {
-      typingEl.textContent = current.substring(0, charIdx++);
-      if (charIdx > current.length) {
-        deleting = true;
-        setTimeout(typeLoop, 1800);
-        return;
+      let phraseIdx = 0;
+      let charIdx = 0;
+      let isDeleting = false;
+
+      // Start with empty text so the animation begins typing the first phrase letter-by-letter
+      typingEl.textContent = '';
+
+      function typeLoop() {
+        const currentPhrase = phrases[phraseIdx];
+
+        if (!isDeleting) {
+          // Type forward
+          charIdx++;
+          typingEl.textContent = currentPhrase.substring(0, charIdx);
+
+          if (charIdx === currentPhrase.length) {
+            // Phrase fully typed: update screen reader aria-label and pause
+            if (heroTitleLine) {
+              heroTitleLine.setAttribute('aria-label', `I'm an aspiring ${currentPhrase}`);
+            }
+            isDeleting = true;
+            setTimeout(typeLoop, PAUSE_DELAY);
+            return;
+          }
+          setTimeout(typeLoop, TYPE_SPEED);
+        } else {
+          // Delete backward
+          charIdx--;
+          typingEl.textContent = currentPhrase.substring(0, charIdx);
+
+          if (charIdx === 0) {
+            // Deletion complete: move to next phrase in sequence and pause briefly
+            isDeleting = false;
+            phraseIdx = (phraseIdx + 1) % phrases.length;
+            setTimeout(typeLoop, SWITCH_DELAY);
+            return;
+          }
+          setTimeout(typeLoop, DELETE_SPEED);
+        }
       }
+
+      // Initial delay before typing starts
+      setTimeout(typeLoop, 400);
     }
-    setTimeout(typeLoop, deleting ? 50 : 90);
   }
-  if (typingEl) typeLoop();
 
   // ── Skill Tabs ─────────────────────────────────────────────
   const tabs   = document.querySelectorAll('.skill-tab');

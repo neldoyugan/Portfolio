@@ -620,39 +620,59 @@ input, textarea {
 .hero-title-line {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   font-family: var(--font-heading);
   font-size: clamp(1.1rem, 2.5vw, 1.45rem);
   font-weight: 500;
   color: var(--text-secondary);
   margin-bottom: 24px;
   flex-wrap: wrap;
+  min-height: 1.6em;
+  line-height: 1.4;
 }
 
 .typing-wrapper {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 2px;
+  min-height: 1.4em;
 }
 
 #typing-text {
   color: var(--cyan-light);
   font-weight: 600;
+  white-space: nowrap;
+  text-shadow: 0 0 12px rgba(103, 232, 249, 0.45), 0 0 24px rgba(34, 211, 238, 0.25);
 }
 
 .cursor-blink {
   display: inline-block;
-  width: 2px;
-  height: 1.2em;
+  width: 2.5px;
+  height: 1.15em;
   background: var(--cyan);
-  animation: blink 0.8s step-end infinite;
+  box-shadow: 0 0 8px rgba(34, 211, 238, 0.7);
+  animation: blink 0.85s ease-in-out infinite;
   vertical-align: middle;
   border-radius: 1px;
+  margin-left: 2px;
 }
 
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
+}
+
+@media (max-width: 480px) {
+  .hero-title-line {
+    min-height: 2.9em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor-blink {
+    animation: none;
+    opacity: 1;
+  }
 }
 
 .hero-desc {
@@ -661,6 +681,10 @@ input, textarea {
   line-height: 1.75;
   margin-bottom: 36px;
   max-width: 480px;
+}
+
+.hero-desc:last-child {
+  margin-bottom: 0;
 }
 
 .hero-cta {
@@ -736,7 +760,7 @@ input, textarea {
   height: 360px;
   border-radius: 50%;
   object-fit: cover;
-  object-position: top;
+  object-position: center 38%;
   position: relative;
   z-index: 2;
   box-shadow: var(--shadow-glow);
@@ -845,11 +869,10 @@ input, textarea {
   pointer-events: none;
 }
 
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
+.about-grid,
+.about-content {
+  max-width: 820px;
+  margin: 0 auto;
 }
 
 .about-label {
